@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name: "Slider",
   data() {
     return {
       timer: null,
