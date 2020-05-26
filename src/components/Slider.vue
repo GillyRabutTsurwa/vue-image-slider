@@ -1,6 +1,4 @@
-  
-<template>
-  <!-- <img v-bind:src="image1" alt /> -->
+  <template>
   <div class="container">
     <transition-group name="fade" tag="div">
       <div v-for="currentValue in [currentIndex]" v-bind:key="currentValue" class="img-container">
@@ -43,6 +41,13 @@ export default {
   },
   computed: {
     currentImg: function() {
+      // Makes more sense if you run this in the console
+      /**
+       * Basically there are 4 images.
+       * currentIndex always goes up by one, even though there are only 4      images
+       * To keep the index values of the images array between 0 and 4, we take the remainders of currentIndex with the length of the array. Here is an example...
+       * if currentIndex = 10, we take 10/4, which is 2 with a REMAINDER of 2. ie, 10%4 = 2, so the index value of images array when currentIndex = 10, will be 2 and the appropriate image will be rendered.
+       */
       return this.images[Math.abs(this.currentIndex) % this.images.length];
     }
   },
