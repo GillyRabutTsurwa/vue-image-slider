@@ -3,14 +3,9 @@
   <!-- <img v-bind:src="image1" alt /> -->
   <div class="container">
     <transition-group name="fade" tag="div">
-      <div
-        v-for="currentValue in [currentIndex]"
-        v-bind:key="currentValue"
-        class="img-container"
-        v-bind:style="{ backgroundImage: `url('${currentImg}')` }"
-      >
-        <!-- NOTE: you can either use style property and bind the background image or put a div inside the image -->
-        <!-- <img class="myImg" v-bind:src="currentImg" /> -->
+      <div v-for="currentValue in [currentIndex]" v-bind:key="currentValue" class="img-container">
+        <!-- NOTE: you can either use style property and bind the background image or put a div inside the image and bind the image source -->
+        <img class="myImg" v-bind:src="currentImg" />
       </div>
     </transition-group>
   </div>
