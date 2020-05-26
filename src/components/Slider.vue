@@ -1,3 +1,4 @@
+  
 <template>
   <!-- <img v-bind:src="image1" alt /> -->
   <div class="container">
@@ -61,7 +62,6 @@ export default {
   width: 100%;
   height: 100%;
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition: all 2s ease-in;
@@ -71,21 +71,18 @@ export default {
   width: 100%;
   opacity: 1;
 }
-
 .fade-enter,
 .fade-leave-to {
   visibility: hidden;
   width: 100%;
   opacity: 0;
 }
-
 .img-container {
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
 }
-
 .myImg {
   width: 100%;
   height: 100%;
